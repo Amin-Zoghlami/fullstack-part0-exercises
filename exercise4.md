@@ -4,17 +4,17 @@
         participant server
         
         browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-        server-->browser: URL redirect
+        server-->>browser: URL redirect
 
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-        server-->browser: HTML document
+        server-->>browser: HTML document
 
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
-        server-->browser: the css file
+        server-->>browser: the css file
         
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
-        server-->browser: the js file
+        server-->>browser: the js file
 
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-        server-->browser: the json file
+        server-->>browser: the json file
 ```
